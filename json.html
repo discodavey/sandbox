@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JSON Tester</title>
+
+    <style>
+      body {
+        font-family: arial;
+      }
+      .description {
+        margin: 0 0 20px;
+      }
+
+    </style>
+</head>
+<body>
+<h1>JSON Tester</h1>
+
+<div class="block" id="block"></div>
+
+<script>
+  window.onload = function name() {
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          var summary, results;
+          var myObj = JSON.parse(this.responseText);
+          var block = document.getElementsByClassName('block')[0];
+          currentDate = new Date().toDateString();
+          currentTime = new Date().toTimeString();
+
+          function showDetails(className, content) {
+            var summary = document.createElement('div');
+            summary.className = className;
+            summary.innerHTML = content;
+            block.appendChild(summary);
+          }
+
+          for (var i = 0; i < myObj.items.length; i++) {
+            var givenDate = new Date(myObj.items[i].start.dateTime).toDateString();
+            var options = {hour: '2-digit', minute:'2-digit'};
+            var startTime = new Date(myObj.items[i].start.dateTime).toLocaleTimeString('en-gb', options);
+            var endTime = new Date(myObj.items[i].end.dateTime).toLocaleTimeString('en-gb', options);
+
+            if (givenDate === currentDate) {
+              if (startTime < currentTime && endTime > currentTime) {
+                console.log(myObj.items[i].summary);
+              }
+              var showDescription = myObj.items[i].description;
+              showDescription = showDescription.substring(0, showDescription.indexOf("PID:"));
+              showDetails('date', startTime);
+              showDetails('show-name', myObj.items[i].summary);
+              showDetails('description', showDescription);
+            }
+
+          }
+
+        }
+    };
+    xmlhttp.open("GET", "http://cambridge105.co.uk/schedule_info/schedule.json", true);
+    xmlhttp.send();
+  };
+</script>
+
+</body>
+</html>

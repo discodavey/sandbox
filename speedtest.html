@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Colour Contrast Presentation</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--[if lte IE 9]>
+                <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		        <script>window.html5 || document.write('<script src="/js/html5shiv.js"><\/script>')</script>
+        <![endif]-->
+
+    </head>
+    <body>
+<script>
+            if(typeof navigator.connection) {
+              console.log('It works');
+            } else {
+              console.log('It doesn\'t');
+            }
+            var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+            var type = connection.type;
+            console.log(type);
+            var dave = connection.effectiveType;
+            
+            if (dave == '4g') {
+              document.getElementById('connection').innerHTML = dave;
+            } else {
+              document.getElementById('connection').innerHTML = 'You don\'t have super duper speedy internet' 
+            }
+          
+          
+        </script>
+        <div id="connection"></div>
+        
+    </body>
+</html>

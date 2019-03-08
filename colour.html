@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <title>Colour Accessibility</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--[if lte IE 9]>
+                <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+                <script>window.html5 || document.write('<script src="/js/html5shiv.js"></script>')</script>
+        <![endif]-->
+
+        <style>
+
+          html {
+            font-size: 62.5%;
+          }
+
+          body {
+            font-family: Arial;
+            font-size: 1.6rem;
+          }
+
+          .container {
+            display: flex;
+            -webkit-flex-flow: column wrap;
+            justify-items: center;
+          }
+
+          .example {
+            margin: 0 0 20px;
+          }
+
+          .example-two {
+            font-size: 2.4rem;
+          }
+
+          .colour-block {
+            margin: 0 10px 0 0;
+            padding: 50px 100px;
+            text-align: center;
+            border-bottom: 1px solid #efefef;
+          }
+
+          .primary-colour {
+            color: #0288d1;
+          }
+
+          .primary-colour-dark {
+            color: #0277bd;
+          }
+
+          .success-dark {
+            color: #569037;
+          }
+
+
+        </style>
+    </head>
+    <body>
+      <div class="container">
+        <div class="colour-block primary-colour">
+          <div class="example">Fails on 16px font size</div>
+          <div class="example-two">Passes on font size 24px and higher</div>
+        </div>
+
+        <div class="colour-block primary-colour-dark">
+          <div class="example">This passes on all font sizes</div>
+        </div>
+
+        <div class="colour-block success-dark">
+          <div class="example">Fails on 16px font size</div>
+          <div class="example-two">Passes on font size 24px and higher</div>
+        </div>
+
+      </div>
+
+    </body>
+</html>

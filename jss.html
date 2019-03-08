@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>HTML5 Template</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--[if lte IE 9]>
+                <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+                <script>window.html5 || document.write('<script src="/js/html5shiv.js"></script>')</script>
+        <![endif]-->
+
+        <link rel="stylesheet" type="text/css" media="screen" href="/assets/stylesheets/style.css" />
+        <link rel="stylesheet" type="text/css" media="print" href="/assets/stylesheets/print.css" />
+    </head>
+    <body>
+      <div id="button">Button</div>
+      <div id="button2">Button2</div>
+
+      <div class="block">This is a block</div>
+
+      <script>
+        var burger = document.getElementById('button');
+          burger.addEventListener('click', function(e) {
+            var bob = document.querySelector('.block');
+            bob.classList.add('cheeseburger');
+            e.preventDefault();
+          });
+
+        var burger = document.getElementById('button2');
+          burger.addEventListener('click', function(e) {
+            var bob = document.querySelector('.block');
+            bob.classList.add('baconburger');
+            e.preventDefault();
+          });
+      </script>
+
+      <style>
+        .cheeseburger {
+          background: red;
+        }
+
+        .baconburger {
+          background: green;
+        }
+      </style>
+    </body>
+</html>

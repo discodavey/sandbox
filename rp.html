@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <title>HTML5 Template</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--[if lte IE 9]>
+                <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+                <script>window.html5 || document.write('<script src="/js/html5shiv.js"></script>')</script>
+        <![endif]-->
+
+        <style>
+          .hide {
+            display: none;
+          }
+
+          #blockOne, #blockTwo {
+            border: 1px solid black;
+          }
+        </style>
+
+
+    </head>
+    <body>
+        <div class="container">
+          <ul>
+            <li><a href="" id="buttonA">Button One</a></li>
+            <li><a href="" id="buttonB">Button Two</a></li>
+          </ul>
+
+          <div id="blockOne">
+            Block One
+          </div>
+
+          <div id="blockTwo">
+            Block Two
+          </div>
+        </div>
+
+        <script>
+          window.onload = function() {
+            var blockOne = document.getElementById("blockOne");
+            var blockTwo = document.getElementById("blockTwo");
+            var buttonA = document.getElementById('buttonA');
+            var buttonB = document.getElementById('buttonB');
+            blockTwo.classList.add('hide');
+
+            buttonA.addEventListener("click", function(e){
+              console.log('Button A screen');
+              blockOne.classList.remove('hide');
+              blockTwo.classList.add('hide');
+              e.preventDefault();
+            });
+
+            buttonB.addEventListener("click", function(e){
+              console.log('Button B screen');
+              blockOne.classList.add('hide');
+              blockTwo.classList.remove('hide');
+              e.preventDefault();
+            });
+          }
+        </script>
+
+    </body>
+</html>

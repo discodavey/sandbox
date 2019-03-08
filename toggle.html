@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>HTML5 Template</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <style>
+          .nav-item {
+            display: block;
+          }
+
+          .nav-item-remove {
+            display: none;
+          }
+
+        </style>
+
+    </head>
+    <body>
+        <ul class="list">
+          <li>
+            <span class="nav-item">One</span>
+          </li>
+          <li>
+            <span class="nav-item">Two</span>
+          </li>
+          <li>
+            <span class="nav-item">Three</span>
+          </li>
+          <li>
+            <span class="nav-item">Four</span>
+          </li>
+
+
+
+          </li>
+        </ul>
+
+        <div class="button">Button</button>
+
+        <script>
+          var els = document.querySelectorAll('.nav-item');
+
+          var button = document.querySelector('.button');
+          button.addEventListener('click', toggleClass);
+
+          function toggleClass() {
+            for (var i = 0; i < els.length; i++) {
+                els[i].classList.toggle('nav-item');
+            }
+          }
+        </script>
+
+    </body>
+</html>

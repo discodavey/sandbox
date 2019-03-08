@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>CSS</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--[if lte IE 9]>
+                <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+                <script>window.html5 || document.write('<script src="/js/html5shiv.js"></script>')</script>
+        <![endif]-->
+
+        <link rel="stylesheet" type="text/css" media="screen" href="/assets/stylesheets/style.css" />
+        <link rel="stylesheet" type="text/css" media="print" href="/assets/stylesheets/print.css" />
+    </head>
+    <body>
+      <style>
+        .container {
+          position: relative;
+          width: 200px;
+          height: 200px;
+          animation-iteration-count:infinite;
+          animation-timing-function:linear;
+          animation-name:orbit;
+          animation-duration:1s;
+          border: 1px solid red;
+        }
+
+        .outer-container {
+          position: absolute;
+          top: 50px;
+          left: 50px;
+          width: 200px;
+          height: 200px;
+          border: 1px solid black;
+          background: url(assets/img/elife-logo.svg) no-repeat 0 0;
+        }
+
+        @keyframes orbit{
+          from {
+            transform: rotate(0deg)
+          }
+
+          to {
+            transform: rotate(360deg)
+          }
+        }
+      </style>
+      <div class="outer-container">
+        <div class="container">
+          <svg fill="red" width="200" height="200">
+            <rect x="10" y="39" width="25" height="5" transform="rotate(-35)">
+          </svg>
+        </div>
+      </div>
+
+    </body>
+</html>

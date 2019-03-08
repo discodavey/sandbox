@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Colour Contrast Presentation</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--[if lte IE 9]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <script>window.html5 || document.write('<script src="/js/html5shiv.js"><\/script>')</script>
+    <![endif]-->
+
+    <style>
+        html {
+            font-size: 62.5%;
+        }
+
+        body {
+            font: 1.6rem arial;
+        }
+
+        .container {
+            margin: 50px auto 200px;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .inner-container {
+            margin: 0 auto;
+            display: flex;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .block {
+            padding: 30px;
+            width: 25%;
+            text-align: center;
+        }
+
+        .large {
+            font-size: 2.4rem;
+        }
+
+    </style>
+
+  </head>
+  <body>
+
+    <div class="container">
+      <h2>Foreground text Vs background colour</h2>
+      <div class="inner-container">
+        <div class="block">
+            <h2>Primary Blue<br>#0288D1</h2>
+            <div class="colour" style="color: #0288D1;">
+                <p>Average text size<br>(16px)<br>Fail</p>
+                <p class="large">Large text<br>(24px)<br>Pass</p> 
+            </div>
+        </div>
+
+        <div class="block">
+            <h2>Primary Blue Dark<br>#0277BD</h2>
+            <div class="colour" style="color: #0277BD;">
+                <p>Average text<br>(16px)<br>Pass</p>
+                <p class="large">Large text<br>(24px)<br>Pass</p> 
+            </div>
+        </div>
+
+        <div class="block">
+            <h2>Green<br>#629F43</h2>
+            <div class="colour" style="color: #629F43;">
+                <p>Average text<br>(16px)<br>Fail</p>
+                <p class="large">Large text size<br>(24px)<br>Pass</p> 
+            </div>
+        </div>
+
+        <div class="block">
+            <h2>Red<br>#CF0C4E</h2>
+            <div class="colour" style="color: #CF0C4E;">
+                <p>This is normal text<br>(16px)<br>Pass</p>
+                <p class="large">Large text size<br>(24px)<br>Pass</p> 
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+        <h2>Image with legend in it</h2>
+        <img src="assets/img/good-image.png" alt="An image">
+    </div>
+
+    <div class="container">
+        <h2>Tables with background colours</h2>
+        <img src="assets/img/tables-with-background-colours.png" alt="An image">
+    </div>
+
+
+    <div class="container">
+        <h2>Tables in images/Images with small text</h2>
+        <img src="assets/img/tables-in-images.png" alt="An image">
+    </div>
+
+  </body>
+</html>

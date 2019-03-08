@@ -1,0 +1,308 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"block",
+				"inline-block\tdisplay"
+			],
+			[
+				"text",
+				"text-transform\tproperty"
+			],
+			[
+				"pos",
+				"position\tproperty"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"remov",
+				"Package Control: Remove Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"rem",
+				"Package Control: Remove Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 205.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/daveprice/Sites/sandbox/assets/css/aria.css",
+		"/Users/daveprice/Sites/sandbox/aria.html",
+		"/Users/daveprice/Sites/pattern-library/source/_patterns/01-molecules/teasers/teaser.mustache",
+		"/Users/daveprice/Sites/pattern-library/assets/sass/build.scss",
+		"/Users/daveprice/Sites/pattern-library/source/_patterns/01-molecules/components/contextual-data.mustache",
+		"/Users/daveprice/Sites/pattern-library/source/_patterns/00-atoms/components/orcid.mustache",
+		"/Users/daveprice/Sites/pattern-library/source/_patterns/02-organisms/content-headers/content-header.mustache",
+		"/Users/daveprice/Sites/pattern-library/assets/sass/_mixins.scss",
+		"/Users/daveprice/Sites/pattern-library/assets/sass/_variables.scss",
+		"/Users/daveprice/Sites/pattern-library/assets/sass/patterns/molecules/annotation-teaser.scss",
+		"/Users/daveprice/Sites/pattern-library/assets/sass/third-party-hacks.scss",
+		"/Users/daveprice/Sites/pattern-library/source/_patterns/00-atoms/components/doi.mustache",
+		"/Users/daveprice/Sites/pattern-library/assets/sass/patterns/atoms/doi.scss",
+		"/Users/daveprice/Sites/pattern-library/source/_patterns/01-molecules/components/article-section.mustache",
+		"/Users/daveprice/Sites/pattern-library/source/_patterns/01-molecules/components/bar-chart.mustache",
+		"/Users/daveprice/Sites/pattern-library/assets/js/components/Carousel.js",
+		"/Users/daveprice/Sites/pattern-library/assets/sass/patterns/organisms/site-header.scss",
+		"/Users/daveprice/Sites/pattern-library/source/_patterns/01-molecules/components/statistic.mustache",
+		"/Users/daveprice/Sites/pattern-library/source/assets/js/main.js",
+		"/Users/daveprice/Sites/pattern-library/source/_patterns/02-organisms/global/site-header.mustache",
+		"/Users/daveprice/Sites/pattern-library/source/_patterns/01-molecules/components/audio-player.mustache",
+		"/Users/daveprice/Sites/pattern-library/source/_patterns/00-atoms/components/media-source.mustache",
+		"/Users/daveprice/Sites/pattern-library/source/_patterns/00-atoms/00-meta/_00-head.mustache",
+		"/Users/daveprice/Sites/libero/patterns-core/source/css/sass/_definitions.scss",
+		"/Users/daveprice/Sites/pattern-library/source/_patterns/04-pages/msa.mustache",
+		"/Users/daveprice/Sites/pattern-library/source/_patterns/04-pages/labs.mustache",
+		"/Users/daveprice/Sites/pattern-library/source/_patterns/04-pages/home.mustache",
+		"/Users/daveprice/Sites/pattern-library/source/_patterns/04-pages/archive-year.mustache",
+		"/Users/daveprice/Sites/pattern-library/source/_patterns/04-pages/article--magazine.mustache",
+		"/Users/daveprice/Sites/pattern-library/source/_patterns/04-pages/article--press-pack.mustache",
+		"/Users/daveprice/Sites/pattern-library/source/_patterns/04-pages/about-people.mustache",
+		"/Users/daveprice/Sites/pattern-library/source/_patterns/04-pages/article--charts.mustache",
+		"/Users/daveprice/Sites/pattern-library/source/_patterns/04-pages/article--figures.mustache",
+		"/Users/daveprice/Sites/pattern-library/source/_patterns/04-pages/article--research.mustache",
+		"/Users/daveprice/Sites/pattern-library/source/_patterns/04-pages/collection.mustache",
+		"/Users/daveprice/Sites/pattern-library/source/_patterns/04-pages/inside-elife-article.mustache",
+		"/Users/daveprice/Sites/pattern-library/source/_patterns/04-pages/magazine.mustache",
+		"/Users/daveprice/Sites/pattern-library/source/_patterns/04-pages/page-not-found.mustache",
+		"/Users/daveprice/Sites/pattern-library/source/_patterns/04-pages/podcast.mustache",
+		"/Users/daveprice/Sites/pattern-library/source/_patterns/04-pages/about-elife.mustache",
+		"/Users/daveprice/Sites/pattern-library/source/_patterns/04-pages/podcasts.mustache",
+		"/Users/daveprice/Sites/pattern-library/source/_patterns/04-pages/subjects.mustache",
+		"/Users/daveprice/Sites/pattern-library/source/_patterns/04-pages/search.mustache",
+		"/Users/daveprice/Sites/pattern-library/source/_patterns/04-pages/profile.mustache",
+		"/Users/daveprice/Sites/pattern-library/source/_patterns/01-molecules/components/investor-logos.json",
+		"/Users/daveprice/Sites/pattern-library/source/_patterns/00-atoms/forms/text-field.json",
+		"/Users/daveprice/Sites/pattern-library/source/assets/js/elife-loader.js",
+		"/Users/daveprice/Sites/pattern-library/bin/dev",
+		"/Users/daveprice/Sites/pattern-library/assets/sass/_typographic-hierarchy.scss",
+		"/Users/daveprice/Sites/pattern-library/assets/sass/_definitions.scss",
+		"/Users/daveprice/Sites/pattern-library/assets/sass/patterns/molecules/about-profile.scss",
+		"/Users/daveprice/Sites/sandbox/index2.html",
+		"/Users/daveprice/Sites/pattern-library/assets/sass/patterns/atoms/reference.scss",
+		"/Users/daveprice/Library/Application Support/Sublime Text 3/Packages/User/LiveReload.sublime-settings",
+		"/Users/daveprice/Sites/pattern-library/source/_patterns/04-pages/_pl-only-grid-content-page-main-col-css-classes.mustache",
+		"/Users/daveprice/Sites/sandbox/assets/css/accessibility.css",
+		"/Users/daveprice/Sites/sandbox/accessibility.html",
+		"/Users/daveprice/Sites/pattern-library/core/source/_patterns/00-atoms/00-meta/_00-head.mustache",
+		"/Users/daveprice/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/daveprice/Sites/pattern-library/source/_patterns/02-organisms/components/about-profiles.mustache",
+		"/Users/daveprice/Sites/pattern-library/source/_patterns/01-molecules/components/about-profile.mustache",
+		"/Users/daveprice/Sites/pattern-library/gulpfile.js",
+		"/Users/daveprice/Sites/pattern-library/assets/sass/patterns/molecules/search-box.scss",
+		"/Users/daveprice/Sites/pattern-library/assets/sass/patterns/atoms/form-item.scss",
+		"/Users/daveprice/Sites/pattern-library/README.md",
+		"/Users/daveprice/Sites/pattern-library/source/_patterns/00-atoms/references/reference.mustache",
+		"/Users/daveprice/Sites/pattern-library/node_modules/cli-table/node_modules/colors/ReadMe.md",
+		"/Users/daveprice/Sites/sandbox/index.html",
+		"/Users/daveprice/Library/Application Support/Sublime Text 3/Packages/User/Color Highlighter/boiler.sublime-snippet",
+		"/Users/daveprice/Desktop/test.css"
+	],
+	"find":
+	{
+		"height": 26.0
+	},
+	"find_in_files":
+	{
+		"height": 101.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"black"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 38.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "sandbox.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"orcid",
+				"source/_patterns/00-atoms/components/orcid.mustache"
+			],
+			[
+				"orci",
+				"source/_patterns/00-atoms/components/orcid.mustache"
+			],
+			[
+				"defin",
+				"patterns-core/source/css/sass/_definitions.scss"
+			],
+			[
+				"variab",
+				"assets/sass/_variables.scss"
+			],
+			[
+				"readme",
+				"README.md"
+			],
+			[
+				"readm",
+				"node_modules/cli-table/node_modules/colors/ReadMe.md"
+			],
+			[
+				"gul",
+				"gulpfile.js"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/Sites/sandbox/sandbox.sublime-workspace"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 316.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

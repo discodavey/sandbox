@@ -1,0 +1,67 @@
+{
+  "meta": {
+    "paginated": false,
+    "nesting": true,
+    "count": 5
+  },
+  "data": [
+    {
+      "meta": {
+        "paginated": true,
+        "nesting": false,
+        "rpuid": "826100",
+        "country": "826",
+        "count": 764,
+        "pageSize": 10,
+        "firstPage": true,
+        "lastPage": false,
+        "totalPages": 77,
+        "pageNumber": 0
+      },
+      "data": [
+        {
+          "id": "826sp:/crid://absoluteradio.co.uk/TheNoRepeatGuarantee/86679069",
+          "name": "First Show",
+          "description": "We'll play you tons of great music, but you'll never hear the same track twice.",
+          "location": {
+            "scheduledStart": "2017-02-09T10:00:00Z",
+            "scheduledStop": "2017-02-09T13:00:00Z"
+          },
+          "mediaCredits": {
+            "role": "artist",
+            "scheme": "urn:ebu",
+            "value": "Ed Sheeran"
+          }
+        },
+        {
+          "id": "826sp:/crid://absoluteradio.co.uk/TheNoRepeatGuarantee/86679069",
+          "name": "Absolute No Repeat Guarantee",
+          "description": "Another Show",
+          "location": {
+            "scheduledStart": "2017-02-09T10:00:00Z",
+            "scheduledStop": "2017-02-09T13:00:00Z"
+          },
+          "mediaCredits": {
+            "role": "artist",
+            "scheme": "urn:ebu",
+            "value": "Ed Sheeran"
+          }
+        },
+        {
+          "id": "826sp:/crid://absoluteradio.co.uk/TheNoRepeatGuarantee/86679069",
+          "name": "Absolute No Repeat Guarantee",
+          "description": "Yet another show",
+          "location": {
+            "scheduledStart": "2017-02-09T10:00:00Z",
+            "scheduledStop": "2017-02-09T13:00:00Z"
+          },
+          "mediaCredits": {
+            "role": "artist",
+            "scheme": "urn:ebu",
+            "value": "Ed Sheeran"
+          }
+        }
+      ]
+    }
+  ]
+}

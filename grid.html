@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>HTML5 Template</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--[if lte IE 9]>
+                <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+                <script>window.html5 || document.write('<script src="/js/html5shiv.js"></script>')</script>
+        <![endif]-->
+
+    </head>
+    <body>
+        <style>
+          body {
+            margin: 0;
+          }
+          .container {
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 400px);
+            grid-gap: 10px;
+            max-width: 1200px;
+            border: 1px solid black;
+          }
+
+          .block {
+            border: 1px solid black;
+          }
+        </style>
+
+
+        <div class="container">
+          <div class="block">Block</div>
+          <div class="block">Block</div>
+          <div class="block">Block</div>
+        </div>
+
+    </body>
+</html>

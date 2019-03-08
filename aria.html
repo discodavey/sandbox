@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Aria Label Test</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="assets/css/aria.css">
+    </head>
+    <body>
+		<div class="container">
+			<header aria-label="Aria Label for Header">
+				<p>This is the <code>header</code> tag</p>
+			</header>
+
+	        <nav aria-label="Aria Label for Navigation">
+						<ul aria-label="This is an unordered list - Aria Label">
+	        		<li>
+	        			<a href="">Home</a>
+	        			<a href="">About</a>
+	        			<a href="">News</a>
+	        			<a href="">Contact</a>
+	        		</li>
+	        	</ul>
+	        	<p>This is the <code>nav</code> tag</p>
+	        </nav>
+
+			<main>
+				<h1>This page is to test aria labels and which HTML tags they get read out on.</h1>
+				<p aria-hidden="true">This is a potato</p>
+				<p>This is the <code>main</code> tag</p>
+				<article>
+					<h2	>This is an article about burgers</h2>
+					<a href="http://bbc.co.uk" aria-label="Potato Potato">This is a link</a>
+					<p>I love burgers.....</p>
+					<p>This is the <code>article</code> tag.</p>
+		        </article>
+
+		        <section aria-label="Aria Label for Section Block">
+		        	<h2>This is a section about Burgers</h2>
+		        	<p>I still love burgers</p>
+					<p>This is the <code>section</code> tag.</p>
+		        </section>
+
+		        <blockquote aria-label="Blockquote - Aria Label">
+		        	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae repellat sunt quae laboriosam, ducimus quia reiciendis similique et placeat veritatis. Sint eius alias corrupti minus nulla minima voluptas ad corporis.
+		        </blockquote>
+
+		        <table aria-label="Table - Aria Label">
+	        		<tr>
+	        			<td>Test 1</td>
+	        		</tr>
+	        		<tr>
+	        			<td>Test 2</td>
+	        		</tr>
+	        		<tr>
+	        			<td>Test 3</td>
+	        		</tr>
+	        	</table>
+
+		        <form>
+		        	<div class="field">
+						<label for="name">Name</label>
+		        		<input type="text" id="name" name="name" aria-label="Enter your name">
+		        	</div>
+		        	<div class="field">
+		        		<label for="Address">Address</label>
+		        		<textarea name="address" id="address" cols="30" rows="10" aria-label="Text Area - Aria Label"></textarea>
+		        	</div>
+		        	<div class="field">
+		        		<label for="number">Pick a Number</label>
+			        	<select name="number" id="number" aria-label="This is an aria label for a select drop down">
+			        		<option value="">Please Select</option>
+			        		<option value="1">1</option>
+			        		<option value="2">2</option>
+			        	</select>
+		        	</div>
+		        	<div class="field">
+		        		<label for="choccy">Do you like chocolate</label>
+		        		<input type="radio" name="choccy" id="choccy">Yes</input>
+		        		<input type="radio" name="choccy" id="choccy">No	</input>
+		        	</div>
+		        	<div class="field">
+		        		<button aria-label="This is a button - Aria Label">Submit</button>
+		        	</div>
+		        </form>
+
+		        <h2>Aria Hidden</h2>
+		        <summary>This is to test aria-hidden</summary>
+
+		        <p aria-hidden="true">Using paragraph tag - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta earum, illo quo. Aut hic id minima harum cum beatae mollitia recusandae fugit, soluta voluptatibus omnis esse, ducimus praesentium delectus sint!</p>
+
+		        <ul aria-hidden="true">
+		        	<li>Unordered list - Test one</li>
+		        	<li>Unordered list - Test two</li>
+		        </ul>
+
+		        <ol aria-hidden="true">
+		        	<li>Ordered list - Test one</li>
+		        	<li>Ordered list - Test two</li>
+		        </ol>
+
+		        <dl aria-hidden="true">
+		        	<dt>Definition List dt</dt>
+		        	<dd>Definition List dd</dd>
+		        </dl>
+
+		        <div aria-hidden="true">div tag - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus ut, voluptatem amet iure sapiente laborum distinctio tempora earum officia alias magnam asperiores doloribus odit nisi quibusdam accusantium in voluptates possimus?</div>
+
+		        <span aria-hidden="true">span tag - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis esse porro dolorum veritatis est eligendi nesciunt tempore magni, quas soluta, blanditiis, laborum nam atque et facere praesentium optio unde ea.</span>
+
+		        <main aria-hidden="true">main tag - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus iusto iure quas hic quisquam, laborum, deleniti tempore. Placeat dolorem aperiam reprehenderit dicta laudantium debitis et mollitia iure, atque aspernatur veritatis?</main>
+
+			</main>
+
+	        <aside aria-label="Aria Label for aside">
+				<p>This is the <code>aside</code> tag.</p>
+				<ul aria-label="Aria Label for unordered list">
+					<li>This is item one</li>
+					<li>This is item two</li>
+				</ul>
+				<ol aria-label="Aria Label for ordered list">
+					<li>This is item one</li>
+					<li>This is item two</li>
+				</ol>
+	        </aside>
+
+	        <footer aria-label="Aria Label for footer">
+				<p>This is the <code>footer</code> tag.</p>
+	        </footer>
+		</div>
+
+		<link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
+    </body>
+</html>

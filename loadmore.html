@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML5 Template</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--[if lte IE 9]>
+                <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		        <script>window.html5 || document.write('<script src="/js/html5shiv.js"><\/script>')</script>
+        <![endif]-->
+
+        <link rel="stylesheet" type="text/css" media="screen" href="/assets/stylesheets/style.css" />
+        <link rel="stylesheet" type="text/css" media="print" href="/assets/stylesheets/print.css" />
+    </head>
+    <body>
+		<div class="add">Add 10</div>
+		<div class="remove">Remove 10</div>
+
+
+		<script>
+			(function dave() {
+				for (i=1; i<11; i++) {
+					console.log(i);
+				}
+			}());
+
+			var addButton = document.querySelector('.add');
+			var minusButton = document.querySelector('.remove');
+
+			addButton.addEventListener('click', function() {
+				i=i+10;
+				console.log(i);
+				console.log("Focusing on " + (i-10) + " though");
+			})
+
+			minusButton.addEventListener('click', function() {
+				if (i>10) {
+					i=i-10;
+					console.log(i);
+					console.log("Focusing on " + (i-10) + " though");
+				}
+			});
+
+		</script>
+    </body>
+</html>
