@@ -2,38 +2,34 @@ var progress = 0;
 var start = null;
 var j = 0;
 var k = 2;
+var timeSet = 2000;
 var carousel = document.getElementsByClassName('block');
+console.log('This is ' + j, k);
+
 function step(timestamp) {
   if (!start) start = timestamp;
   var progress = timestamp - start;
-
-  if (progress < 120) {
+  if (progress < timeSet) {
     window.requestAnimationFrame(step);
-
   }
-
-  if (progress >=120) {
-    console.log('dave');
-    if (j<2) {
-      if (j==0) {
-        bannerSwitch(1,2);
-      } else if (j==1) {
-        bannerSwitch(1,0);
-      }
-    } else {
-      bannerSwitch(0,2);
+  if (progress >= timeSet) {
+    if (j == 2) {
       j=0;
+      k=2;
+    } else {
+      j++;
+      k=j-1;
     }
-
+    console.log('This is ' + j, k);
+    bannerSwitch(j,k);
+    start = null;
+    window.requestAnimationFrame(step);
   }
-
 }
 
 function bannerSwitch(j,k) {
   carousel[j].classList.add('show');
   carousel[k].classList.remove('show');
-  window.requestAnimationFrame(step);
-
 }
 
 window.requestAnimationFrame(step);
