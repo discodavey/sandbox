@@ -20,14 +20,11 @@ img {
 .block1, .block2, .block3 {
   position: absolute;
   top: 0;
-  left: 0;
-  right: 0;
   width: 100%;
   max-width: 1114px;
   text-align: center;
   color: #fff;
-  opacity: 0;
-  transition: opacity 2s;
+  display: none;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -73,4 +70,35 @@ h1 {
 
 .read-more:hover {
   background-color: #fff;
+}
+
+.slide-first {
+  animation: slideout 3s;
+}
+
+
+@keyframes slidein {
+  from {
+    margin-left: 2400px;
+  }
+
+  to {
+    margin-left: 0;
+  }
+}
+
+.slide-first {
+  animation-duration: 1s;
+  animation-name: slidein;
+}
+
+
+@keyframes slidein {
+  from {
+    margin-left: 1200px;
+  }
+
+  to {
+    margin-left: 0;
+  }
 }

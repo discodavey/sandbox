@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>Keyframes</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+      <style>
+        .container {
+          position: relative;
+          width: 1200px;
+          height: 300px;
+          animation: slidein 3s infinite;
+        }
+
+        @keyframes slidein {
+          0% {
+            background: #ccc;
+            width: 1200px;
+            height: 300px;
+            margin-left: 2400px;
+          }
+
+          100% {
+            transition-delay: 5s;
+            background: #ccc;
+            width: 1200px;
+            height: 300px;
+            margin-left: 0;
+          }
+        }
+
+      </style>
+      <div class="container"></div>
+
+      <script>
+
+        var carousel = document.querySelector('.container');
+          carousel.addEventListener('mouseover', function(){
+          carousel.style.animationPlayState='paused';
+        })
+
+        carousel.addEventListener('mouseout', function(){
+          carousel.style.animationPlayState='running';
+        })
+        
+      </script>
+    </body>
+</html>
