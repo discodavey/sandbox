@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>HTML5 Template</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--[if lte IE 9]>
+                <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+                <script>window.html5 || document.write('<script src="/js/html5shiv.js"></script>')</script>
+        <![endif]-->
+
+        <style>
+
+          .loading {
+            position: relative;
+            display: inline-block;
+          }
+
+          .inner-elife {
+            position: absolute;
+            top: 1px;
+            left: 1px;
+          }
+          .outer-elife {
+            position: absolute;
+            animation: spin 1s linear infinite normal 1s;
+            border: 1px solid white;
+          }
+
+          @keyframes spin {
+            0% {transform:rotate(0deg);}
+            100% {transform:rotate(360deg);}
+          }
+
+          @keyframes spin2 {
+            0% {transform:rotate(271deg);}
+            50% {transform:rotate(360deg);}
+            75% {transform: rotate(0deg);}
+            100% {transform: rotate(44deg)};
+          }
+        </style>
+    </head>
+    <body>
+      <div class="container">
+        <div class="loading">
+          <img src="assets/img/outer-elife-logo2.svg" alt="Blah" class="outer-elife">
+          <img src="assets/img/inner-elife-logo.svg" alt="Blah" class="inner-elife">
+        </div>
+      </div>
+
+    </body>
+</html>

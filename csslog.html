@@ -1,0 +1,33 @@
+<!doctype html>
+<html dir="ltr" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+
+    html[dir="ltr"] .test:not([dir]),
+    .test[dir="ltr"] {
+      border-left: 10px solid red;
+    }
+
+    html[dir="rtl"] .test:not([dir]),
+    .test[dir="rtl"] {
+      border-right: 10px solid red;
+    }
+
+    html[dir] .test[dir],
+    html[dir] .test:not([dir]) {
+      border-inline-start: 10px solid green;
+    }
+
+  </style>
+</head>
+
+<body>
+
+<div class="test">No dir attribute on this element</div>
+<div class="test" dir="ltr">This element has dir=ltr</div>
+<div class="test" dir="rtl">This element has dir=rtl</div>
+
+</body>
+</html>
