@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>HTML5 Template</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <style>
+          #paragraph {
+            width: 400px;
+          }
+
+          .truncate {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            line-clamp: 3;
+            box-orient: vertical;
+            overflow: hidden;
+          }
+
+          .button-remove {
+            display: none;
+          }
+        </style>
+
+    </head>
+    <body>
+      <div id="paragraph" class="truncate">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi illum est repellat illo quo quam, omnis deleniti fuga nobis assumenda nemo nihil atque libero iure aliquam dolore dicta provident. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos maiores dolor minima voluptatem dicta praesentium dolores, beatae at quasi soluta obcaecati, reprehenderit sint voluptatibus aspernatur excepturi, voluptas placeat veniam voluptatum!</div>
+      <a href="" id="see-more">see more</a>
+      <a href="" id="see-less" class="button-remove">see less</a>
+
+
+      <script>
+        var seeMore = document.getElementById('see-more');
+        var seeLess = document.getElementById('see-less');
+        var paragraph = document.getElementById('paragraph');
+
+        seeMore.addEventListener("click", function(event){
+          paragraph.classList.remove('truncate');
+          this.classList.add('button-remove');
+          seeLess.classList.remove('button-remove');
+          event.preventDefault();
+        }, false);
+
+        seeLess.addEventListener("click", function(event){
+          paragraph.classList.add('truncate');
+          this.classList.add('button-remove');
+          seeMore.classList.remove('button-remove');
+          event.preventDefault();
+        }, false);
+
+      </script>
+    </body>
+</html>

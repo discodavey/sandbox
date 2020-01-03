@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <title>HTML5 Template</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+          .container {
+            margin: 0 auto;
+            width: 100%;
+            max-width: 1200px;
+            height: 2000px;
+          }
+
+          .text-box {
+            margin: 50px 0 0;
+            border: 1px solid blue;
+          }
+
+          .main-container {
+            display: grid;
+            margin-left: 25%;
+            border: 1px solid black;
+          }
+
+          .sticky-nav {
+            position: fixed;
+            display: block;
+            top: 0;
+          }
+          .content-area-margin {
+            margin-left: 25%;
+          }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+          <div id="burger" class="text-box">
+            This is some text
+          </div>
+          <nav id="nav">
+            <ul>
+              <li><a href="">Home</a></li>
+              <li><a href="">About Us</a></li>
+              <li><a href="">News</a></li>
+              <li><a href="">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+
+    <script>
+
+      function handler(entries) {
+        for (entry of entries) {
+          if (entry.isIntersecting) {
+            console.log('burger');
+            document.getElementById('nav').classList.remove('sticky-nav');
+          } else {
+            console.log('cheeseburger');
+            document.getElementById('nav').classList.add('sticky-nav');
+          }
+        }
+      }
+
+      let observer =  new IntersectionObserver(handler);
+      observer.observe(document.querySelector(".text-box"));
+
+    </script>
+
+    </body>
+</html>
