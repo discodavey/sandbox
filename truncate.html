@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <title>HTML5 Template</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+
+      .container {
+        margin: 0 auto;
+        width: 600px;
+      }
+      .visuallyhidden {
+        display: none;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div id="some-text"></div>
+    </div>
+
+    <script>
+      var regex = /(<([^>]+)>)/ig;
+      const someText = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas quidem et rerum totam odit repellendus qui culpa enim id? <b>Expedita</b>, cupiditate! Nemo facilis ipsa maxime, veritatis architecto cheeseburger tempore aperiam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur beatae ipsum totam doloremque inventore ducimus, minima tempora suscipit qui fugiat at aut fugit atque possimus eligendi, vitae repellendus est corporis. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero optio porro natus assumenda eligendi consequuntur laborum! Dolore iusto recusandae ipsam eaque. Qui aut placeat tempora. A ut tempora molestiae? Tenetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat quisquam fugiat aliquid vitae dicta necessitatibus vel <ul><li>this is a list</li><li>This is a list 2</li></ul>consequuntur sed quidem nostrum nam quae suscipit eum sint facere saepe, mollitia, at itaque? <b>Lorem ipsum</b> dolor sit amet, consectetur adipisicing elit. Libero, at corrupti officiis vel ea porro perferendis consequatur deleniti itaque accusamus recusandae officia maxime animi sapiente error reprehenderit quisquam non ex. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae natus corporis commodi numquam expedita! Quos voluptate eius provident ut, tempora vel praesentium, recusandae aperiam, doloremque eum dicta ab natus laboriosam!"
+
+      const paragraph = document.getElementById('some-text');
+      var regex = /(<([^>]+)>)/ig;
+      var result = someText.replace(regex, "");
+      console.log(result + ' ' + result.length);
+      var bob = someText.length - result.length;
+      console.log(bob);
+      paragraph.innerHTML = someText.substring(0, 200 + bob) + '...<span class="visuallyhidden">' + someText.substring(200 + bob);
+
+    </script>
+
+  </body>
+</html>
