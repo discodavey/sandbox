@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>HTML5 Template</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    </head>
+    <body>
+
+      <div class="container">
+        <div class="burger">
+
+        </div>
+      </div>
+
+
+      <script>
+
+        for (var i=1; i<17; i=i+1) {
+          var linkContainer = document.createElement('div');
+          var linkTitle = document.createElement('h3');
+          var linkContent = document.createElement('div');
+
+          linkContainer.classList.add('link-container', 'c105r-back');
+          document.body.appendChild(linkContainer);
+
+          linkContainer.appendChild(linkTitle);
+          linkContainer.appendChild(linkContent);
+
+          linkContent.classList.add('content-area');
+          linkContent.setAttribute('contentEditable', 'true');
+          linkContent.setAttribute('id', 'content' + i);
+
+          linkTitle.innerHTML = 'Link ' + i;
+
+          console.log(i);
+        }
+
+      </script>
+
+    </body>
+</html>

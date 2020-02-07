@@ -10,28 +10,69 @@
         margin: 0 auto;
         width: 600px;
       }
+
       .visuallyhidden {
-        display: none;
+        border: 0;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+        user-select: none;
+      }
+
+      .caption-text__hidden::before {
+        content: " ...";
       }
 
     </style>
   </head>
   <body>
     <div class="container">
-      <div id="some-text"></div>
+      <div class="caption-text__body"></div>
     </div>
 
     <script>
-      var regex = /(<([^>]+)>)/ig;
-      const someText = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas quidem et rerum totam odit repellendus qui culpa enim id? <b>Expedita</b>, cupiditate! Nemo facilis ipsa maxime, veritatis architecto cheeseburger tempore aperiam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur beatae ipsum totam doloremque inventore ducimus, minima tempora suscipit qui fugiat at aut fugit atque possimus eligendi, vitae repellendus est corporis. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero optio porro natus assumenda eligendi consequuntur laborum! Dolore iusto recusandae ipsam eaque. Qui aut placeat tempora. A ut tempora molestiae? Tenetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat quisquam fugiat aliquid vitae dicta necessitatibus vel <ul><li>this is a list</li><li>This is a list 2</li></ul>consequuntur sed quidem nostrum nam quae suscipit eum sint facere saepe, mollitia, at itaque? <b>Lorem ipsum</b> dolor sit amet, consectetur adipisicing elit. Libero, at corrupti officiis vel ea porro perferendis consequatur deleniti itaque accusamus recusandae officia maxime animi sapiente error reprehenderit quisquam non ex. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae natus corporis commodi numquam expedita! Quos voluptate eius provident ut, tempora vel praesentium, recusandae aperiam, doloremque eum dicta ab natus laboriosam!"
 
-      const paragraph = document.getElementById('some-text');
-      var regex = /(<([^>]+)>)/ig;
-      var result = someText.replace(regex, "");
-      console.log(result + ' ' + result.length);
-      var bob = someText.length - result.length;
-      console.log(bob);
-      paragraph.innerHTML = someText.substring(0, 200 + bob) + '...<span class="visuallyhidden">' + someText.substring(200 + bob);
+      const someText = "Feta camembert de normandie cauliflower cheese. Cheese slices stinking bishop squirty cheese cream cheese bavarian bergkase croque monsieur cauliflower cheese the big cheese. Everyone loves cheddar queso roquefort chalk and cheese blue castello cottage cheese mozzarella. Cheese on toast red leicester when the cheese comes out everybody's happy cheese slices babybel cauliflower cheese swiss cream cheese. Monterey jack feta caerphilly.<p>Dolcelatte paneer caerphilly. St. agur blue cheese ricotta monterey jack cheesecake cheeseburger gouda swiss croque monsieur. Cow bocconcini paneer babybel halloumi say cheese croque monsieur everyone loves. <ul><li>Cheddar</li><li>red leicester</li><li>say cheese</li><li>cheese strings</li></ul> mozzarella bavarian bergkase edam brie. Cow danish fontina pecorino.</p><p>Brie camembert de normandie queso. Emmental fromage blue castello blue castello stinking bishop cottage cheese jarlsberg dolcelatte. Manchego cut the cheese squirty cheese st. agur blue cheese roquefort squirty cheese cheesy feet cow. Cauliflower cheese bocconcini boursin cauliflower cheese cheese and biscuits stinking bishop who moved my cheese cut the cheese. Goat cow chalk and cheese fromage frais.</p><p>Emmental danish fontina mascarpone. Dolcelatte cheese and biscuits mascarpone fondue the big cheese mozzarella pepper jack pecorino. Cheese and biscuits fromage frais fromage cheese triangles swiss mozzarella melted cheese who moved my cheese. Cheese strings.</p>Cheesecake cheese slices cheesecake. Fromage frais camembert de normandie dolcelatte cream cheese camembert de normandie brie fondue pecorino. Jarlsberg cheesecake roquefort the big cheese macaroni cheese cheese on toast dolcelatte boursin. Cheesy feet blue castello pepper jack fondue."
+
+      const paragraph = document.getElementsByClassName('caption-text__body')[0];
+      showText();
+      var visual = document.getElementsByClassName('visuallyhidden')[0];
+      var truncateText = document.getElementsByClassName('caption-text__see-more')[0];
+      var fullText = document.getElementsByClassName('caption-text__see-less')[0];
+      var captionTextHidden = document.getElementsByClassName('caption-text__hidden')[0];
+
+      function showText() {
+        paragraph.innerHTML = someText.substring(0, 200) + '<span class="caption-text__hidden" aria-hidden="true"></span><a href="#" class="caption-text__see-more" id="seeMore" aria-hidden="true">See more</a><span class="visuallyhidden">' + someText.substring(200) + '<span class="caption-text__hidden" aria-hidden="true"></span><a href="#" class="caption-text__see-less" id="seeLess" aria-hidden="true">See less</a></span>';
+        return paragraph.innerHTML;
+      }
+      function seeMore() {
+        truncateText.style.display = 'none';
+        captionTextHidden.style.display = 'none';
+      }
+      function seeLess() {
+        truncateText.style.display = 'inline-block';
+        captionTextHidden.style.display = 'inline-block';
+      }
+
+      truncateText.addEventListener('click', (e) => {
+        if (truncateText.classList.contains('caption-text__see-more')) {
+          visual.classList.remove('visuallyhidden');
+          seeMore();
+        }
+        e.preventDefault();
+      });
+
+      fullText.addEventListener('click', (e) => {
+        if (fullText.classList.contains('caption-text__see-less')) {
+          visual.classList.add('visuallyhidden');
+          seeLess();
+        }
+        e.preventDefault();
+      });
 
     </script>
 
