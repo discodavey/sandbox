@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>HTML5 Template</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+      <input type="checkbox" class="burger">
+      <label for="">This is a checkbox</label>
+        <script>
+          var burger = document.querySelector('.burger');
+          burger.addEventListener('change', function(){
+            if (this.checked) {
+              console.log('cheeseburger');
+            } else {
+              console.log('hotdog');
+            }
+          })
+        </script>
+    </body>
+</html>
