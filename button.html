@@ -5,15 +5,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
-      <input type="checkbox" class="burger">
+      <input type="checkbox" class="burger" value="biorxiv">
       <label for="">This is a checkbox</label>
         <script>
           var burger = document.querySelector('.burger');
           burger.addEventListener('change', function(){
-            if (this.checked) {
-              console.log('cheeseburger');
+            if (!this.checked) {
+              this.value = 'biorxiv';
+              console.log(this.value);
             } else {
-              console.log('hotdog');
+              this.value = 'other';
+              console.log(this.value);
             }
           })
         </script>

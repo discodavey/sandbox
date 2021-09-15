@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <title>MutationObserver</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <button class="burger">test</button>
+    <button class="cheeseburger">test two</button>
+
+    <script>
+      if (window.MutationObserver) {
+        const elementToObserve = document.querySelector(".burger");
+
+        const observer = new MutationObserver(function() {
+            console.log('callback that runs when observer is triggered');
+        });
+
+        if(observer) {
+          console.log('it works');
+        } else {
+          console.log('does not work');
+        }
+
+        observer.observe(elementToObserve, {subtree: true, childList: true});
+        console.log(observer.observe(elementToObserve, {subtree: true, childList: true}));
+      } else {
+        console.log('jfowifjwfjwej');
+      }
+
+
+    </script>
+  </body>
+</html>
