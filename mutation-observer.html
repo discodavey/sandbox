@@ -1,0 +1,66 @@
+<html>
+  <head>
+    <title>MutationObserver</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <style>
+      .see-you {
+        display: none;
+        border: 1px solid black;
+      }
+
+      .see-you-too {
+        display: block;
+      }
+
+      .burger {
+        display: block;
+        height: 100px;
+        border: 1px solid black;
+        clear: both;
+      }
+
+    </style>
+    <div class="burger">
+      Burger
+    <div>
+      <div class="see-you">
+        Here I am
+      </div>
+    <script>
+
+      function derek() {
+        console.log('Derek works');
+
+          // identify an element to observe
+          const elementToObserve = document.querySelector(".see-you");
+
+          // create a new instance of `MutationObserver` named `observer`,
+          // passing it a callback function
+          const observer = new MutationObserver(function() {
+              console.log('callback that runs when observer is triggered');
+              const hotdog = document.querySelector('.see-you').classList.contains('see-you-too');
+
+              if(hotdog) {
+                console.log('bingo');
+              } else {
+                console.log('Survey Said');  
+              };
+          });
+
+          // call `observe()` on that MutationObserver instance,
+          // passing it the element to observe, and the options object
+          observer.observe(elementToObserve, {subtree: true, childList: true, attributes: true});
+        };
+
+      const dave = document.querySelector('.burger');
+      dave.addEventListener('click', function() {
+        document.querySelector('.see-you').classList.add('see-you-too');
+        derek();
+      });
+
+    </script>
+  </body>
+</html>

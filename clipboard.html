@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <title>HTML5 Template</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  </head>
+  <body>
+    <button class="modal-content__clipboard-button">This is a button</button>
+    <div class="modal-content__clipboard">This is some text to be copied</div>
+    <div class="modal-content__clipboard-output">The output you have copied will
+      appear here</div>
+    <script>
+      clipboardButton = document.querySelector('.modal-content__clipboard-button');
+      clipboardOutput = document.querySelector('.modal-content__clipboard-output');
+      clipboardButton.addEventListener('click', () => this.clipboard());
+
+      function clipboard() {
+        const text = document.querySelector('.modal-content__clipboard').textContent;
+        navigator.clipboard.writeText(text).then(() => {
+          this.clipboardButton.textContent = 'Copied!';
+        });
+      };
+    </script>
+  </body>
+</html>

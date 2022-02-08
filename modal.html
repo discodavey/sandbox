@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <title>Grid Layout</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <style>
+          body {
+            background: green;
+          }
+
+          .modal-container {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            background-color: rgba(255,255,255,0.5);
+            visibility: hidden;
+          }
+
+          .modal-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            background-color: #fff;
+            padding: 15px;
+          }
+
+          .modal-content__show {
+            visibility: visible;
+            opacity: 1;
+          }
+
+          .modal-content__button {
+            padding: 5px 10px;
+            background-color: grey;
+            border-radius: 10px;
+            color: #fff;
+            text-decoration: none;
+          }
+        </style>
+    </head>
+    <body>
+        <a class="modal-click">Click here</a>
+        <div class="modal-container">
+            <div class="modal-content">
+              This is a modal window
+              <a href="" class="modal-content__button">Close</a>
+            </div>
+        </div>
+
+        <script>
+          const modalWindow = document.querySelector('.modal-container');
+          const modalBtnClick = document.querySelector('.modal-click');
+          const modalButtonClose = document.querySelector('.modal-content__button');
+
+          function modalToggle() {
+            modalWindow.classList.toggle('modal-content__show');
+            event.preventDefault();
+          }
+
+          function windowOnClick(event) {
+            if (event.target === modalWindow) {
+              modalToggle();
+            }
+          }
+
+          modalBtnClick.addEventListener('click', modalToggle);
+          modalButtonClose.addEventListener('click', modalToggle);
+          window.addEventListener('click', windowOnClick);
+        </script>
+    </body>
+</html>
