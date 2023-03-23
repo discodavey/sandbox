@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <title>HTML5 Template</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  </head>
+  <body>
+
+    <script>
+      if (navigator.clipboard && window.isSecureContext) {
+        console.log('yee haa');
+      }
+
+      const data = 'hello';
+      if (typeof(navigator.clipboard.write(data))) {
+        console.log(data);
+      }
+    </script>
+  </body>
+</html>
