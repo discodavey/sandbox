@@ -1,0 +1,15 @@
+h1, h2, h3 {
+  color: red;
+}
+
+.container :where(h1,h2,h3) {
+  color: green;
+}
+
+:is(.header) a {
+  color: pink;
+}
+
+div:is(.cool, .fun) {
+  color: red;
+}
