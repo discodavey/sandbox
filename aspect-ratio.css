@@ -1,0 +1,9 @@
+.container {
+  display: block;
+  width: 100px;
+  border: 1px solid black;
+}
+
+.ratio16-9 {
+  aspect-ratio: 1/1;
+}
