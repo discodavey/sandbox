@@ -1,0 +1,57 @@
+<html>
+  <head>
+    <title>HTML5 Template</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      body {
+        font-family: arial;
+        font-size: 1rem;
+      }
+      .nice-modal {
+        max-width: 400px;
+        min-height: 300px;
+        border: 1px solid black;
+      }
+
+      .nice-modal::backdrop {
+        background-color: salmon;
+      }
+
+      .confirm-button {
+        border: 1px solid #999;
+        border-radius: 5px;
+        background-color: #087acc;
+        color: white;
+        font-size: 16px;
+        padding: 10px;
+        float: right;
+      }
+    </style>
+  </head>
+  <body>
+    This is some text
+    <div class="container">
+      <dialog class="nice-modal" id="niceModal">
+        <form>
+          <h2>This is a modal window</h2>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum
+            impedit deserunt tempore tenetur accusantium voluptas neque amet!
+            Perspiciatis, repellat at quod, voluptatibus cum harum perferendis
+            nesciunt inventore et, iste. Lorem ipsum, dolor sit amet consectetur
+            adipisicing elit. Ut, incidunt! Quod tenetur debitis id, nisi
+            suscipit ipsum porro fuga dolor exercitationem soluta eos cupiditate
+            reiciendis provident nihil labore doloribus libero.</p>
+          <button class="confirm-button" id="confirmBtn" value="default">Confirm</button>
+        </form>
+      </dialog>
+    </div>
+
+    <div class="button">
+      <button id="niceBtn">Show the dialog</button>
+    </div>
+
+    <script src="dialogue.js"></script>
+
+  </body>
+</html>
