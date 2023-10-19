@@ -13,3 +13,24 @@ h1, h2, h3 {
 div:is(.cool, .fun) {
   color: red;
 }
+
+.button {
+  border: none;
+  border-radius: 4px;
+  background: grey;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+
+  &:where(.action-button) {
+    background: blue;
+  }
+
+  &:where(.clipboard-button) {
+    background: green;
+  }
+}
+
+.section > :is(.button) {
+  background: pink;
+}
