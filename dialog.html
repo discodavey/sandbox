@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>HTML5 Template</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <style>
+          body {
+            background-color: #fff;
+          }
+          dialog {
+            margin: 100px auto;
+            background-color: #eee;
+            opacity: 1;
+            border: 1px solid #cf5;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 300px;
+            min-height: 300px;
+          }
+
+          ::backdrop {
+            background-color: rgba(0, 0, 0, 0.5);
+          }
+        </style>
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <div class="container">
+
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo quidem dolorum est velit ullam harum provident error, aliquid quisquam obcaecati itaque nisi tenetur quia, impedit rerum quibusdam perferendis iste molestiae. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae sequi illum, dolore, quis, voluptate commodi facere velit voluptates amet reprehenderit at excepturi magni in laboriosam consectetur deserunt eos officia dignissimos. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident expedita accusamus explicabo, nemo quis maxime consequatur fuga nesciunt magni quibusdam delectus animi illum iste soluta distinctio! Cumque quasi accusantium et!</p>
+          <button class="open-button">Open</button>
+
+          <dialog>
+            <p>this is a box</p>
+            <button class="close-button">Close</button>
+          </dialog>
+
+        </div>
+        <script>
+          const dialog = document.querySelector('dialog');
+          const button = document.querySelector('.open-button');
+          const closeButton = document.querySelector('.close-button');
+
+          button.addEventListener("click", () => {
+            dialog.showModal();
+          })
+
+          closeButton.addEventListener("click", () => {
+            dialog.close();
+          })
+        </script>
+
+    </body>
+</html>
