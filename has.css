@@ -1,0 +1,26 @@
+.container {
+  background: grey;
+
+  /* Just Cheeseburger */
+  &:has(.cheeseburger) {
+    background: green;
+  }
+}
+
+.container {
+  background: grey;
+
+  /* Burger or Hotdog */
+  &:has(.burger, .hotdog) {
+    background: red;
+  }
+}
+
+.container2 {
+  background: grey;
+
+  /* Has burger and hotdog */
+  &:has(.burger):has(.hotdog) {
+    background: red;
+  }
+}
