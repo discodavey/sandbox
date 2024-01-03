@@ -1,0 +1,26 @@
+.container {
+  border: 1px solid black;
+
+  .burger {
+    background: #BE37F0;
+    margin: 10px;
+
+    .brian {
+      color: #212121;
+      display: inline-block;
+      padding: 10px;
+      text-decoration: none;
+
+      &:last-child {
+        color: #BF37F0;
+      }
+
+      .derek {
+        background: #fff;
+        border-radius: 10px;
+        display: block;
+        padding: 10px;
+      }
+    }
+  }
+}
