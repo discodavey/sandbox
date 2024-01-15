@@ -1,0 +1,25 @@
+.body {
+  margin: 0;
+}
+
+.links {
+  padding-bottom: 20px;
+}
+
+.content > * {
+  padding: 20px;
+}
+
+#content1:target {
+  background: red;
+  color: white;
+}
+
+#content2:target {
+  background: pink;
+}
+
+#content3:target {
+  background: green;
+  color: white;
+}
