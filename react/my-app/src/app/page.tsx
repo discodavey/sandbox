@@ -1,5 +1,12 @@
 import Image from 'next/image'
 import styles from './page.module.css'
+import Dave from './dave'
+
+const person =  {
+  firstName: 'Dave',
+  lastName: 'Price',
+  town: 'Burwell',
+}
 
 export default function Home() {
   return (
@@ -10,6 +17,12 @@ export default function Home() {
           <code className={styles.code}>src/app/page.tsx</code>
         </p>
         <div>
+          <Dave />
+          <div className="dave">
+            <p>First Name: {person.firstName}</p>
+            <p>Surname: {person.lastName}</p>
+            <p>Town: {person.town}</p>
+          </div>
           <a
             href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
             target="_blank"

@@ -1,0 +1,24 @@
+:root {
+  interpolate-size: allow-keywords;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+section {
+  height: 2.5rem;
+  overflow: hidden;
+  transition: height ease 1s;
+}
+
+section:hover,
+section:focus {
+  height: max-content;
+}

@@ -1,0 +1,34 @@
+.container {
+  background: #F8F9FB;
+  border: 1px solid red;
+  padding: 24px 24px 24px 32px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.burger {
+  display: grid;
+  grid-template-columns: auto auto;
+  padding-left: 32px;
+  border: 1px solid black;
+}
+
+.warning-icon {
+  grid-column: 1/2;
+  width: 24px;
+  height: 24px;
+  background: 0 0 url(previous.svg) no-repeat #F8F9FB;
+  border: 1px solid black;
+}
+
+.sentence {
+  grid-column: 2/3;
+  white-space: nowrap;
+  border: 1px solid black;
+}
+
+.link {
+  grid-column: 2/3;
+  display: inline;
+  white-space: nowrap;
+}

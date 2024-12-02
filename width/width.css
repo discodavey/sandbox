@@ -1,0 +1,15 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  margin-inline: auto;
+  border: 1px solid black;
+  width: min(1114px, 100% - 2rem);
+}
