@@ -1,0 +1,21 @@
+.container {
+  margin-inline: 20px;
+  margin-block: 20px;
+  padding-inline: 20px;
+  padding-block: 20px;
+  background: green;
+  color: white;
+  writing-mode: horizontal-tb;
+}
+
+.container-two {
+  margin-inline: 20px;
+  margin-block: 20px;
+  padding-inline: 20px;
+  padding-block: 20px;
+  background: red;
+}
+
+.wrapper {
+  border: 1px solid black;
+}

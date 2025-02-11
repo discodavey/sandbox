@@ -1,0 +1,59 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/Users/daveprice/.nvm/versions/node/v6.14.3/bin/node',
+1 verbose cli   '/Users/daveprice/.nvm/versions/node/v6.14.3/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'typescript' ]
+2 info using npm@3.10.10
+3 info using node@v6.14.3
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readGlobalPackageData
+7 silly fetchPackageMetaData typescript
+8 silly fetchDirectoryPackageData typescript
+9 silly install normalizeTree
+10 silly loadCurrentTree Finishing
+11 silly loadIdealTree Starting
+12 silly install loadIdealTree
+13 silly cloneCurrentTree Starting
+14 silly install cloneCurrentTreeToIdealTree
+15 silly cloneCurrentTree Finishing
+16 silly loadShrinkwrap Starting
+17 silly install loadShrinkwrap
+18 silly loadShrinkwrap Finishing
+19 silly loadAllDepsIntoIdealTree Starting
+20 silly install loadAllDepsIntoIdealTree
+21 silly resolveWithNewModule !invalid#1 checking installable status
+22 silly cache add args [ 'typescript', null ]
+23 verbose cache add spec typescript
+24 silly cache add parsed spec Result {
+24 silly cache add   raw: 'typescript',
+24 silly cache add   scope: null,
+24 silly cache add   escapedName: 'typescript',
+24 silly cache add   name: null,
+24 silly cache add   rawSpec: 'typescript',
+24 silly cache add   spec: '/Users/daveprice/Sites/sandbox/typescript',
+24 silly cache add   type: 'directory' }
+25 error addLocal Could not install /Users/daveprice/Sites/sandbox/typescript
+26 silly rollbackFailedOptional Starting
+27 silly rollbackFailedOptional Finishing
+28 silly runTopLevelLifecycles Finishing
+29 silly install printInstalled
+30 verbose stack Error: No name provided in package.json
+30 verbose stack     at /Users/daveprice/.nvm/versions/node/v6.14.3/lib/node_modules/npm/lib/cache/add-local.js:65:17
+30 verbose stack     at /Users/daveprice/.nvm/versions/node/v6.14.3/lib/node_modules/npm/node_modules/read-package-json/read-json.js:356:5
+30 verbose stack     at checkBinReferences_ (/Users/daveprice/.nvm/versions/node/v6.14.3/lib/node_modules/npm/node_modules/read-package-json/read-json.js:320:45)
+30 verbose stack     at final (/Users/daveprice/.nvm/versions/node/v6.14.3/lib/node_modules/npm/node_modules/read-package-json/read-json.js:354:3)
+30 verbose stack     at then (/Users/daveprice/.nvm/versions/node/v6.14.3/lib/node_modules/npm/node_modules/read-package-json/read-json.js:124:5)
+30 verbose stack     at ReadFileContext.<anonymous> (/Users/daveprice/.nvm/versions/node/v6.14.3/lib/node_modules/npm/node_modules/read-package-json/read-json.js:295:20)
+30 verbose stack     at ReadFileContext.callback (/Users/daveprice/.nvm/versions/node/v6.14.3/lib/node_modules/npm/node_modules/graceful-fs/graceful-fs.js:78:16)
+30 verbose stack     at FSReqWrap.readFileAfterOpen [as oncomplete] (fs.js:367:13)
+31 verbose cwd /Users/daveprice/Sites/sandbox
+32 error Darwin 21.6.0
+33 error argv "/Users/daveprice/.nvm/versions/node/v6.14.3/bin/node" "/Users/daveprice/.nvm/versions/node/v6.14.3/bin/npm" "install" "-g" "typescript"
+34 error node v6.14.3
+35 error npm  v3.10.10
+36 error No name provided in package.json
+37 error If you need help, you may report this error at:
+37 error     <https://github.com/npm/npm/issues>
+38 verbose exit [ 1, true ]

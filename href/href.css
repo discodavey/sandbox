@@ -1,0 +1,8 @@
+.container {
+  a[href="/podcast"] {
+    background: red;
+    color: white;
+    padding: 10px 20px;
+    display: inline-block;
+  }
+}
